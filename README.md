@@ -13,6 +13,9 @@ We will use:
 I'm not really sure how the tasks are divided between Avarice and AVR-GDB, but
 I use them together.
 
+The compile commands where taken from the makefile from the book "MAKE: AVR
+Programming".
+
 ## Arduino Pro Mini ##
 ### Connections ###
 What to connect on the dragon to the arduino:
