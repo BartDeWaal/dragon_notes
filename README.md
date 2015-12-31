@@ -49,7 +49,7 @@ I've included a sample program, example\_pro\_mini.elf
     avr-gcc -Os -g -std=gnu99 -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -DF_CPU=16000000UL -DBAUD=9600UL -mmcu=atmega328p -c -o example_pro_mini.o example_pro_mini.c
     avr-gcc -Wl,-Map,example_pro_mini.map  -Wl,--gc-sections  -mmcu=atmega328p example_pro_mini.o  -o example_pro_mini.elf
     avr-objcopy -j .text -j .data -O ihex example_pro_mini.elf example_pro_mini.hex
-### Upload ### 
+### Upload ###
     avrdude -c dragon_isp -p atmega328p  -U flash:w:example_pro_mini.hex
 ### Debug ###
 This device only supports debugwire. To turn this on you need to set the right
