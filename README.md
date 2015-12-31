@@ -16,6 +16,20 @@ I use them together.
 The compile commands where taken from the makefile from the book "MAKE: AVR
 Programming".
 
+## Permissions for AVR dragon ##
+You could run all upload commands using sudo, but that is not a good idea.
+
+Better is to add a rules file. Add 99-avrdragon.rules to:
+
+    /etc/udev/rules.d/
+
+and add yourself to the plugdev group using:
+
+    # groupadd plugdev
+    # useradd -G plugdev myusername
+
+The easiest way to apply these settings is to restart.
+
 ## Arduino Pro Mini ##
 ### Connections ###
 What to connect on the dragon to the arduino:

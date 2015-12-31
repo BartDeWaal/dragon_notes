@@ -1,0 +1,2 @@
+# AVR dragon
+ATTR{idVendor}=="03eb", ATTR{idProduct}=="2107", MODE="660", GROUP="plugdev"
