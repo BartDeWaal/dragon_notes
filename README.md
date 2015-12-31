@@ -51,9 +51,11 @@ For my test setup nothing else is connected.
 We use avrdude to set fuses. 
 
 To read fuses, use:
+
     avrdude -c dragon_isp -p atmega328p -nv
 
 To set the default fuses, use:
+
     avrdude -c dragon_isp -p atmega328p \
                     -U lfuse:w:0xFF:m -U hfuse:w:0xDA:m -U efuse:w:0x05:m
 
