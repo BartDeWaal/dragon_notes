@@ -63,7 +63,7 @@ These are the default fuses I got on my chinese Arduino clone. Check for
 yourself what they should be.
 
 ### Compile ###
-I've included a sample program, example\_pro\_mini.elf
+I've included a sample program, example\_pro\_mini.c
 
     avr-gcc -Os -g -std=gnu99 -Wall -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -DF_CPU=16000000UL -DBAUD=9600UL -mmcu=atmega328p -c -o example_pro_mini.o example_pro_mini.c
     avr-gcc -Wl,-Map,example_pro_mini.map  -Wl,--gc-sections  -mmcu=atmega328p example_pro_mini.o  -o example_pro_mini.elf
