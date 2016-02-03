@@ -108,7 +108,7 @@ I had some problems with avarice (turns out I was using gdb instead of
 avr-gdb), and I got a segfault. My CPU usage was extremely high afterwards, and
 it turned out I had to kill it again.
 
-## ATTINY85-20PU ##
+## ATTINY85 ##
 ### Connections ###
 
 *  VCC (on dragon)   - ATTINY pin 8 (VCC)
@@ -125,7 +125,7 @@ To read fuses, use:
 
     avrdude -c dragon_isp -p t85 -nvB4
 
-To set the default fuses (at least on the one I got from china), use:
+To set the default fuses use:
 
     avrdude -c dragon_isp -p t85 -B4 \
                     -U lfuse:w:0x62:m -U hfuse:w:0xDF:m -U efuse:w:0xFF:m
