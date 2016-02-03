@@ -107,3 +107,25 @@ And enjoy the fast flashing lights.
 I had some problems with avarice (turns out I was using gdb instead of
 avr-gdb), and I got a segfault. My CPU usage was extremely high afterwards, and
 it turned out I had to kill it again.
+
+## ATTINY85-20PU ##
+### Connections ###
+
+*  VCC (on dragon)   - ATTINY pin 8 (VCC)
+*  GND (on dragon)   - ATTINY pin 4 (GND)
+*  ISP pin 1 (MISO)  - ATTINY pin 6 (MISO)
+*  ISP pin 2 (VTG)   - VCC header on AVR dragon
+*  ISP pin 3 (SCK)   - ATTINY pin 7 (SCK)
+*  ISP pin 4 (MOSI)  - ATTINY pin 5 (MOSI)
+*  ISP pin 5 (RESET) - ATTINY pin 1 (RESET)
+*  ISP pin 6 (GND)   - GND header on AVR dragon
+
+### Fuses ###
+To read fuses, use:
+
+    avrdude -c dragon_isp -p t85 -nvB4
+
+To set the default fuses (at least on the one I got from china), use:
+
+    avrdude -c dragon_isp -p t85 -B4 \
+                    -U lfuse:w:0x62:m -U hfuse:w:0xDF:m -U efuse:w:0xFF:m
