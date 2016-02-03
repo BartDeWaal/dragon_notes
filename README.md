@@ -26,6 +26,10 @@ Better is to add a rules file. Add 99-avrdragon.rules to:
 and add yourself to the plugdev group using:
 
     # groupadd plugdev
+    # usermod -a -G plugdev myusername
+
+If the user doesn't exist yet:
+
     # useradd -G plugdev myusername
 
 The easiest way to apply these settings is to restart.
