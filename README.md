@@ -129,3 +129,25 @@ To set the default fuses use:
 
     avrdude -c dragon_isp -p t85 -B4 \
                     -U lfuse:w:0x62:m -U hfuse:w:0xDF:m -U efuse:w:0xFF:m
+
+## ATMEGA328P ##
+### Connections ###
+
+*  VCC (on dragon)   - ATMEGA pin 7 (VCC)
+*  GND (on dragon)   - ATMEGA pin 8 (GND)
+*  ISP pin 1 (MISO)  - ATMEGA pin 18 (MISO)
+*  ISP pin 2 (VTG)   - VCC header on AVR dragon
+*  ISP pin 3 (SCK)   - ATMEGA pin 19 (SCK)
+*  ISP pin 4 (MOSI)  - ATMEGA pin 17 (MOSI)
+*  ISP pin 5 (RESET) - ATMEGA pin 1 (RESET)
+*  ISP pin 6 (GND)   - GND header on AVR dragon
+
+### Fuses ###
+To read fuses, use:
+
+    avrdude -c dragon_isp -p m328 -nv
+
+To set the default fuses use:
+
+    avrdude -c dragon_isp -p m328p \
+                    -U lfuse:w:0x62:m -U hfuse:w:0xD9:m -U efuse:w:0xFF:m
